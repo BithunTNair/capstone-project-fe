@@ -1,0 +1,30 @@
+.navbar-toggler:focus{
+    box-shadow: none !important;
+}
+.navbar{
+    background-color: rgb(200, 186, 245) !important;
+    padding: 0;
+}
+.nav-item{
+    color: #000;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding-inline: 1rem;
+}
+.navbar-collapse{
+    min-height: 40px !important;
+}
+.navbar-collapse li{
+    height: 40px;
+}
+.navbar-dropdown{
+    display: flex;
+    align-items: center;
+    height: 40px;
+}
+.user{
+    height: 40px;
+    display: flex;
+    align-items: center;
+}

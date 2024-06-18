@@ -1,0 +1,22 @@
+.common-input-container{
+    position: relative;
+    width: 100%;
+  
+}
+.common-input-container input{
+    outline: none;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    color: #000;
+}
+.common-input-container label{
+    position: absolute;
+    color: rgb(74, 72, 72);
+    text-transform: capitalize;
+    font-size: 1rem;
+    pointer-events: none;
+    top: 0.5rem;
+    left: 1rem;
+}
