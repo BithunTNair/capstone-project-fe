@@ -1,10 +1,12 @@
-import React, { useState } from 'react'
-import './LogSign.css'
+import React, { useState }  from 'react'
+
+import './DashLogSign.css'
 import Input from '../Common/InputField/Input'
 import { errorToast, successToast } from '../../Plugins/Toast/Toast';
 import axios from 'axios';
 
-function SignupBox({ setAuth }) {
+
+function DashSign() {
   const [signupData, setSignupData] = useState({});
   const handleSignup = (e) => {
     setSignupData({ ...signupData, [e.target.name]: e.target.value })
@@ -17,8 +19,8 @@ function SignupBox({ setAuth }) {
         data: signupData
 
       }).then((res)=>{
-        successToast(res.message);
-        setAuth('login')
+        successToast('signup successfull! Please go through login process');
+       
       }).catch((error)=>{
         errorToast(error?.response?.data.message|| 'something went wrong')
 
@@ -51,10 +53,9 @@ function SignupBox({ setAuth }) {
       <div className='mt-4 d-flex align-items-end justify-content-end' >
         <button className='common-btn ' onClick={doSignup}>Signup</button>
       </div>
-      <p className='authbox-text mt-4' >Already have an account <i className='px-2' onClick={() => setAuth('login')}>login here</i> </p>
+    
     </div>
 
   )
 }
-
-export default SignupBox
+export default DashSign

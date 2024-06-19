@@ -1,0 +1,9 @@
+.common-btn{
+    background-color: #000;
+    color: #fff;
+    border-radius: 5px;
+    padding: 0.3rem 0.7rem;
+}
+.authbox{
+    box-shadow: rgb(99, 99, 99,0.2) 0px 2px 8px 0px;
+}

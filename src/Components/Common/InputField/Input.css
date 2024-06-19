@@ -5,7 +5,7 @@
 }
 .common-input-container input{
     outline: none;
-    border: 1px solid #000000;
+    border: 1px solid #000;
     border-radius: 10px;
     width: 100%;
     padding: 0.5rem 1rem;
@@ -13,10 +13,19 @@
 }
 .common-input-container label{
     position: absolute;
-    color: rgb(74, 72, 72);
+    color: rgb(194, 191, 191);
     text-transform: capitalize;
     font-size: 1rem;
     pointer-events: none;
     top: 0.5rem;
     left: 1rem;
+}
+.common-input-container input:is(:focus,:valid)~ label{
+    transform: translate(0,-1.35rem) scale(0.8);
+    background-color: white;
+    padding-inline: 0.3rem;
+    color: var(--brand-dark);
+}
+input:-webkit-autofill{
+    -webkit-box-shadow:0 0 0 1000px white inset
 }

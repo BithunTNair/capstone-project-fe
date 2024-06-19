@@ -2,8 +2,9 @@
     box-shadow: none !important;
 }
 .navbar{
-    background-color: rgb(200, 186, 245) !important;
+    background-color: rgb(130, 234, 151) !important;
     padding: 0;
+    
 }
 .nav-item{
     color: #000;
@@ -11,6 +12,10 @@
     align-items: center;
     height: 100%;
     padding-inline: 1rem;
+    cursor: pointer;
+}
+.nav-item:hover{
+    background-color: aquamarine;
 }
 .navbar-collapse{
     min-height: 40px !important;

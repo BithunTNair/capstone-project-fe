@@ -1,5 +1,6 @@
 import React from 'react'
 import './Carousal.css'
+import img1 from '../../assets/turfimg.avif'
 
 function Carousal() {
   return (
@@ -11,21 +12,21 @@ function Carousal() {
     </div>
     <div className="carousel-inner">
       <div className="carousel-item active">
-        <img src= '' className="d-block w-100" alt="..."/>
+        <img src= {img1} className="d-block w-100" alt="..."/>
         <div className="carousel-caption d-none d-md-block">
           <h5>Let's Play The Game</h5>
       
         </div>
       </div>
       <div className="carousel-item">
-        <img src= '' className="d-block w-100" alt="..."/>
+        <img src= {img1} className="d-block w-100" alt="..."/>
         <div className="carousel-caption d-none d-md-block">
           <h5>Let's Play The Game</h5>
          
         </div>
       </div>
       <div className="carousel-item">
-        <img src= '' className="d-block w-100" alt="..."/>
+        <img src= {img1} className="d-block w-100" alt="..."/>
         <div className="carousel-caption d-none d-md-block">
           <h5>Let's Play The Game</h5>
        
