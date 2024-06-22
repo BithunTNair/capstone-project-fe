@@ -18,6 +18,7 @@ function LoginBox({ setAuth}) {
       data: loginData
     }).then((res) => {
       localStorage.setItem('token', res.data.token)
+      localStorage.setItem('user', JSON.stringify(res.data.user))
       successToast(res.message);
       navigate('/home')
     }).catch((error) => {

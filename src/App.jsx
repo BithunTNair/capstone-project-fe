@@ -7,6 +7,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min'
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
 import Routing from './Components/Routing'
+import Loader from './Components/Common/Loader/Loader';
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
   return (
     <>
       <ToastContainer />
+      <Loader/>
       <Routing />
     </>
   )
