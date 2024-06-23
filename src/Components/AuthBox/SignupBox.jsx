@@ -3,13 +3,18 @@ import './LogSign.css'
 import Input from '../Common/InputField/Input'
 import { errorToast, successToast } from '../../Plugins/Toast/Toast';
 import axios from 'axios';
+import { useDispatch, useSelector } from 'react-redux';
+import { showorhideLoader } from '../../Redux/generalSlice';
 
 function SignupBox({ setAuth }) {
   const [signupData, setSignupData] = useState({});
+  const {showLoader}=useSelector((store=>store.general));
+  const dispatch= useDispatch();
   const handleSignup = (e) => {
     setSignupData({ ...signupData, [e.target.name]: e.target.value })
   };
   const doSignup = () => {
+    dispatch(showorhideLoader(true))
     if (signupData.password === signupData.confirmPassword) {
       axios({
         method: 'POST',
@@ -18,9 +23,11 @@ function SignupBox({ setAuth }) {
 
       }).then((res)=>{
         successToast(res.message);
-        setAuth('login')
+        setAuth('login');
+        dispatch(showorhideLoader(false))
       }).catch((error)=>{
         errorToast(error?.response?.data.message|| 'something went wrong')
+        dispatch(showorhideLoader(false))
 
       })
     } else {

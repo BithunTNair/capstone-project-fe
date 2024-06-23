@@ -1,16 +1,18 @@
-// import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
+const INITIAL_STATE={
+    showLoader:false
+}
+const generalSlice = createSlice({
+    name: 'general',
+    initialState: INITIAL_STATE,
+    reducers: {
+        showorhideLoader: (state, action) => {
+            state.showLoader = action.payload
+        }
+    }
+});
 
-// const generalSlice = createSlice({
-//     name: 'user',
-//     initialState: INITIAL_STATE,
-//     reducers: {
-//         setUserData: (state, action) => {
-//             state.user = action.payload
-//         }
-//     }
-// });
 
 
-
-// export const { setUserData } = userSlice.actions;
-// export default userSlice.reducer
+export const { showorhideLoader } = generalSlice.actions;
+export default generalSlice.reducer
