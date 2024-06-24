@@ -1,9 +1,11 @@
 import React from 'react'
 import './Navbar.css'
 import { useNavigate} from 'react-router-dom'
+import { useSelector } from 'react-redux'
 
 
 function Navbar() {
+    const {user}=useSelector(state=>state.user)
     const navigate=useNavigate()
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -17,9 +19,9 @@ function Navbar() {
                         <li className="nav-item" onClick={() => navigate('/home')}>
                             Home
                         </li>
-                        <li className="nav-item" onClick={() => navigate('/newcourt')}>
+                      {user.role===1 &&   <li className="nav-item" onClick={() => navigate('/newcourt')}>
                             Create New Court
-                        </li>
+                        </li>}
                         <li className="nav-item" onClick={() => navigate('/courts/courtlist')}>
                             Available Turf Locations
                         </li>
@@ -33,7 +35,7 @@ function Navbar() {
                     <span className="navbar-text">
                         <li className="nav-item dropdown">
                             <span className="nav-link dropdown-toggle user" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="true">
-                               
+                               {user.firstName+' '+user.lastName}
                             </span>
                             <ul className="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
                                 <li><span className="dropdown-item">Profile</span></li>
