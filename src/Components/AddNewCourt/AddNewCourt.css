@@ -1,3 +1,6 @@
 .court-cont{
 width: 20rem;
 }
+img{
+    cursor: pointer;
+}
