@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const AxiosInstance = axios.create({
-    baseURL: `${import.meta.env.VITE_BASE_URL}`
+    baseURL:` ${import.meta.env.VITE_BASE_URL}`
 });
 
 AxiosInstance.interceptors.request.use(function (config) {
@@ -13,7 +13,7 @@ AxiosInstance.interceptors.response.use(function(response){
     return response
 },function(error){
     if(error.response && error.response.status===401){
-        window.location.href('/');
+        window.location.href='/';
         localStorage.clear();
         console.log('unauthorized user');
     }
