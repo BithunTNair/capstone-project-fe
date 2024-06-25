@@ -16,9 +16,9 @@ function Routing() {
         <Route path='/' element={<AuthPage />} />
         <Route path='/home' element={<Home />} />
         <Route path='/dashboard' element={<Dashboard/>} />
-        <Route>
+        <Route path='/courts' >
           <Route path='courtlist' element={<CourtListPage/>}/>
-          <Route path="courtdetails/:id" element={<CourtDetailsPage />} />
+          <Route path="courtdetails" element={<CourtDetailsPage />} />
         </Route>
         <Route path="/newcourt" element={<NewCourt />} />
       </Routes>

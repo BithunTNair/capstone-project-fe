@@ -23,8 +23,8 @@ function AddNewCourt() {
   const addFile = () => {
     inputRef.current.click()
   }
-  const descriptionChange = (data) => {
-    setCourtData({ ...courtData, description: data })
+  const descriptionChange = (value) => {
+    setCourtData({ ...courtData, description: value})
   }
   const createCourt = () => {
     const formData = new FormData();
@@ -36,12 +36,13 @@ function AddNewCourt() {
     })
 
     AxiosInstance({
-      url:'/admin/createnewcourt' ,
+      url:'/admin/createnewcourt',
       method: 'POST',
       data: formData,
       headers:{
         'Content-Type':'multipart/form-data'
       }
+    
 
     }).then((res)=>{
       successToast('New Court added Successfully')

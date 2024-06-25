@@ -1,0 +1,22 @@
+.court-data-container{
+    height: calc(100vh - 43px);
+}
+.img-container{
+    position: relative;
+    height: 100%;
+}
+
+img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.court-contents-container {
+    position: absolute;
+    height: 15rem;
+    width: 100%;
+    inset: auto auto 0rem auto;
+    z-index: 2;
+    color: #fff;
+    margin-left: 2rem;
+}
