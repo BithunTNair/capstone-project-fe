@@ -102,7 +102,7 @@ function AddNewCourt() {
               </>
             )}
           </div>
-          <img src={addIcon} alt="" height={'50px'} width={'50px'} onClick={addFile} />
+          <img src={addIcon} alt=""  onClick={addFile} className='addIcon' />
         </div>
         <div className='d-flex justify-content-between mt-4'>
           <button className='common-btn bg-black text-white'>{' '} Cancel</button>

@@ -1,6 +1,8 @@
 import React from 'react'
 import './Carousal.css'
 import img1 from '../../assets/turfimg.avif'
+import img2 from '../../assets/turf-img.jpg'
+import img3 from '../../assets/turf2.jpg'
 
 function Carousal() {
   return (
@@ -19,14 +21,14 @@ function Carousal() {
         </div>
       </div>
       <div className="carousel-item">
-        <img src= {img1} className="d-block w-100" alt="..."/>
+        <img src= {img2} className="d-block w-100" alt="..."/>
         <div className="carousel-caption d-none d-md-block">
           <h5>Let's Play The Game</h5>
          
         </div>
       </div>
       <div className="carousel-item">
-        <img src= {img1} className="d-block w-100" alt="..."/>
+        <img src= {img3} className="d-block w-100" alt="..."/>
         <div className="carousel-caption d-none d-md-block">
           <h5>Let's Play The Game</h5>
        

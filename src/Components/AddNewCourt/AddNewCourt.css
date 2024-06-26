@@ -1,6 +1,8 @@
 .court-cont{
 width: 20rem;
 }
-img{
+.addIcon{
+    height: 50px;
+    width: 50px;
     cursor: pointer;
 }

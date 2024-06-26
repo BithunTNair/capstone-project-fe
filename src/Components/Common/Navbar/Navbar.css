@@ -2,12 +2,14 @@
     box-shadow: none !important;
 }
 .navbar{
-    background-color: rgb(130, 234, 151) !important;
+    /* background-color: rgb(130, 234, 151) !important; */
+    background: #434242 !important;
     padding: 0;
+   
     
 }
 .nav-item{
-    color: #000;
+    color: #fff;
     display: flex;
     align-items: center;
     height: 100%;
@@ -15,7 +17,7 @@
     cursor: pointer;
 }
 .nav-item:hover{
-    background-color: aquamarine;
+    background-color: rgb(163, 169, 166);
 }
 .navbar-collapse{
     min-height: 40px !important;
@@ -32,4 +34,7 @@
     height: 40px;
     display: flex;
     align-items: center;
+}
+.click-play{
+    color: #fff;
 }
