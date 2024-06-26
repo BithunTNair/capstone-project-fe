@@ -10,7 +10,7 @@ function Home() {
 
         <Navbar/>
         <Carousal/>
-        <Block/>
+        {/* <Block/> */}
     </div>
   )
 }

@@ -25,7 +25,7 @@ function LoginBox({ setAuth}) {
       localStorage.setItem('token', res.data.token)
       localStorage.setItem('user', JSON.stringify(res.data.user));
       dispatch(setUserData(res.data.user))
-      navigate('/')
+      navigate('/home')
       dispatch(showorhideLoader(false));
       successToast(res.message);
 
